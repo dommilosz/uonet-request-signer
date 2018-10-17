@@ -1,7 +1,7 @@
 version: 2
 jobs:
   php:
-    #working_directory: ~/signer/php
+    working_directory: ~/signer
     docker:
     - image: circleci/php:7
     steps:
