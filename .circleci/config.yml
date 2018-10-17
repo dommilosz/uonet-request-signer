@@ -1,14 +1,14 @@
 version: 2
 jobs:
   php:
-    working_directory: ~/signer/php
+    #working_directory: ~/signer/php
     docker:
     - image: circleci/php:7
     steps:
     - checkout:
         path: ~/signer
     - run: composer install
-    - run: php ./tests/signer_test.php
+    - run: php ./php/tests/signer_test.php
   js:
     working_directory: ~/signer/js
     docker:
