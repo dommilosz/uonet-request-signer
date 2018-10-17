@@ -1,27 +1,27 @@
 version: 2
 jobs:
   php:
+    working_directory: ~/signer/php
     docker:
     - image: circleci/php:7
-    - working_directory: ~/signer/php
     steps:
     - checkout:
         path: ~/signer
     - run: composer install
     - run: php ./tests/signer_test.php
   js:
+    working_directory: ~/signer/js
     docker:
     - image: circleci/node:8
-    - working_directory: ~/signer/js
     steps:
     - checkout:
         path: ~/signer
     - run: npm install
     - run: ./node_modules/.bin/mocha
   jvm:
+    working_directory: ~/signer/jvm
     docker:
     - image: circleci/openjdk:8
-    - working_directory: ~/signer/jvm
     steps:
     - checkout:
         path: ~/signer
