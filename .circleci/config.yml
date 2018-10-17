@@ -3,25 +3,28 @@ jobs:
   php:
     docker:
     - image: circleci/php:7
+    - working_directory: ~/signer/php
     steps:
-    - checkout
-    - run: cd php/
+    - checkout:
+        path: ~/signer
     - run: composer install
     - run: php ./tests/signer_test.php
   js:
     docker:
     - image: circleci/node:8
+    - working_directory: ~/signer/js
     steps:
-    - checkout
-    - run: cd js/
+    - checkout:
+        path: ~/signer
     - run: npm install
     - run: ./node_modules/.bin/mocha
   jvm:
     docker:
     - image: circleci/openjdk:8
+    - working_directory: ~/signer/jvm
     steps:
-    - checkout
-    - run: cd jvm/
+    - checkout:
+        path: ~/signer
     - run: ./gradlew check
     - store_test_results:
         path: ./jvm/build/test-results
