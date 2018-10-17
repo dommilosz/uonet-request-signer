@@ -25,7 +25,7 @@ jobs:
     steps:
     - checkout:
         path: ~/signer
-    - run: ./gradlew check
+    - run: ./gradlew check jacocoTestReport
     - store_test_results:
         path: ./jvm/build/test-results
 
