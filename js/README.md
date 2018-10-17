@@ -1,6 +1,6 @@
 # Uonet+ request signer for JavaScript
 
-![npm (scoped)](https://img.shields.io/npm/v/@wulkanowy/uonet-request-signer.svg?style=flat-square)
+[![npm](https://img.shields.io/npm/v/@wulkanowy/uonet-request-signer.svg?style=flat-square)](https://www.npmjs.com/package/@wulkanowy/uonet-request-signer)
 
 ## Instalation
 

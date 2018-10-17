@@ -1,6 +1,6 @@
 {
   "name": "@wulkanowy/uonet-request-signer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "UONET+ Request Signer for JS",
   "main": "index.js",
   "scripts": {
