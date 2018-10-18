@@ -27,7 +27,7 @@ jobs:
         path: ~/signer
     - run: ./gradlew check jacocoTestReport
     - store_test_results:
-        path: ./jvm/build/test-results
+        path: ./build/test-results
 
 workflows:
   version: 2
