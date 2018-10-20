@@ -17,7 +17,9 @@ In browser:
 ```html
 <script src="signer.js"></script>
 <script>
-    const signed = signer.signContent(password, certificate, content);
+    signer.signContent(password, certificate, content).then(signed => {
+        console.log(signed);
+    });
 </script>
 ```
 
@@ -26,7 +28,9 @@ In Node.js:
 ```js
 const signer = require("@wulkanowy/uonet-request-signer");
 
-const signed = signer.signContent(password, certificate, content);
+signer.signContent(password, certificate, content).then(signed => {
+    console.log(signed);
+});
 ```
 
 ## Tests
