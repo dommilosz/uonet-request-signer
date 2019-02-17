@@ -4,6 +4,7 @@
 [![npm](https://img.shields.io/npm/v/@wulkanowy/uonet-request-signer.svg?style=for-the-badge)](https://www.npmjs.com/package/@wulkanowy/uonet-request-signer)
 [![JitPack](https://img.shields.io/jitpack/v/wulkanowy/uonet-request-signer.svg?style=for-the-badge)](https://jitpack.io/#wulkanowy/uonet-request-signer)
 [![Packagist Pre Release](https://img.shields.io/packagist/vpre/wulkanowy/uonet-request-signer.svg?style=for-the-badge)](https://packagist.org/packages/wulkanowy/uonet-request-signer)
+[![pypi](https://img.shields.io/pypi/v/uonet-request-signer.svg?style=for-the-badge)](https://pypi.org/project/uonet-request-signer/)
 
 
 ## Implementations
@@ -11,3 +12,4 @@
 - [JS](https://github.com/wulkanowy/uonet-request-signer/tree/master/js)
 - [Java](https://github.com/wulkanowy/uonet-request-signer/tree/master/jvm)
 - [PHP](https://github.com/wulkanowy/uonet-request-signer/tree/master/php)
+- [Python](https://github.com/wulkanowy/uonet-request-signer/tree/master/python)
