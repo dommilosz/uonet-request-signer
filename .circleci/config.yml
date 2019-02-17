@@ -36,7 +36,7 @@ jobs:
     - checkout:
         path: ~/signer
     - run: pip install --user .[testing]
-    - run: pytest
+    - run: python -m pytest .
 
 workflows:
   version: 2
