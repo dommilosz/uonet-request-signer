@@ -35,7 +35,7 @@ jobs:
     steps:
     - checkout:
         path: ~/signer
-    - run: pip install --user .[test]
+    - run: pip install --user .[testing]
     - run: pytest
 
 workflows:
