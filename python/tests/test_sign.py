@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from uonet_request_signer import sign
+from uonet_request_signer import sign_content
 import pytest
 
 TEST_DATA = [
@@ -13,6 +13,6 @@ TEST_DATA = [
 
 
 @pytest.mark.parametrize("password,certificate,expected", TEST_DATA)
-@pytest.mark.parametrize("data", [{}, "{}"])
-def test_sign(password, certificate, expected, data):
-    assert expected == sign(password, certificate, data)
+@pytest.mark.parametrize("content", [{}, "{}"])
+def test_sign(password, certificate, content, expected):
+    assert expected == sign_content(password, certificate, content)
