@@ -28,6 +28,15 @@ jobs:
     - run: ./gradlew check jacocoTestReport
     - store_test_results:
         path: ./build/test-results
+  python:
+    working_directory: ~/signer/python
+    docker:
+    - image: circleci/python:3.6
+    steps:
+    - checkout:
+        path: ~/signer
+    - run: pip install --user .[test]
+    - run: pytest
 
 workflows:
   version: 2
@@ -36,3 +45,4 @@ workflows:
     - php
     - js
     - jvm
+    - python
