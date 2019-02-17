@@ -26,5 +26,5 @@ setup(
     packages=["uonet_request_signer"],
     package_dir={"uonet_request_signer": "uonet-request-signer"},
     install_requires=["pyopenssl"],
-    extra_requires={"test": ["pytest"]},
+    extras_require={"test": ["pytest"]},
 )
