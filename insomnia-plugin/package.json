@@ -1,5 +1,5 @@
 {
-  "name": "insomnia-plugin-uonet-request-signer",
+  "name": "@wulkanowy/insomnia-plugin-uonet-request-signer",
   "version": "0.1.0",
   "description": "UONET+ Request Signer by Wulkanowy",
   "main": "plugin.js",
@@ -10,7 +10,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wulkanowy/uonet-request-signer.git"
+  },
+  "keywords": [
+    "uonet",
+    "wulkanowy",
+    "insomnia-plugin"
+  ],
+  "author": "Mikołaj Pich <m.pich@outlook.com>",
+  "bugs": {
+    "url": "https://github.com/wulkanowy/uonet-request-signer/issues"
+  },
+  "homepage": "https://github.com/wulkanowy/uonet-request-signer/tree/master/insomnia-plugin#readme",
   "license": "MIT",
   "dependencies": {
     "@wulkanowy/uonet-request-signer": "^0.1.4"
