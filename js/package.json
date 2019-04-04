@@ -1,6 +1,6 @@
 {
   "name": "@wulkanowy/uonet-request-signer",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "UONET+ Request Signer for JS",
   "main": "index.js",
   "scripts": {
@@ -23,10 +23,12 @@
   },
   "homepage": "https://github.com/wulkanowy/uonet-request-signer/tree/master/js#readme",
   "dependencies": {
-    "node-forge": "^0.7.6",
-    "node-webcrypto-ossl": "^1.0.38"
+    "node-forge": "^0.8.2"
   },
   "devDependencies": {
-    "mocha": "^5.2.0"
+    "mocha": "^6.0.2"
+  },
+  "optionalDependencies": {
+    "node-webcrypto-ossl": "^1.0.42"
   }
 }
