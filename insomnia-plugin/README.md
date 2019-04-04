@@ -6,7 +6,7 @@ This is a plugin for [Insomnia](https://insomnia.rest) that allows users to auto
 
 ## Installation
 
-Install the `insomnia-plugin-uonet-request-signer` plugin from Preferences > Plugins.
+Install the `@wulkanowy/insomnia-plugin-uonet-request-signer` plugin from Preferences > Plugins.
 
 ## Usage
 
