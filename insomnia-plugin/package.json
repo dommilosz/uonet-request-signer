@@ -1,0 +1,18 @@
+{
+  "name": "insomnia-plugin-uonet-request-signer",
+  "version": "0.1.0",
+  "description": "UONET+ Request Signer by Wulkanowy",
+  "main": "plugin.js",
+  "insomnia": {
+    "name": "uonet-request-signer",
+    "description": "UONET+ Request Signer by Wulkanowy"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@wulkanowy/uonet-request-signer": "^0.1.4"
+  }
+}
