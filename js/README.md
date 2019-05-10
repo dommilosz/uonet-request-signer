@@ -15,26 +15,11 @@ $ npm i @wulkanowy/uonet-request-signer
 In browser:
 
 ```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.8.2/forge.min.js"></script>
 <script src="signer.js"></script>
 <script>
     signer.signContent(password, certificate, content).then(signed => {
         console.log(signed);
     });
 </script>
-```
-
-In Node.js:
-
-```js
-const signer = require("@wulkanowy/uonet-request-signer");
-
-signer.signContent(password, certificate, content).then(signed => {
-    console.log(signed);
-});
-```
-
-## Tests
-
-```bash
-$ npm run test
 ```
