@@ -1,6 +1,6 @@
 {
   "name": "@wulkanowy/insomnia-plugin-uonet-request-signer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "UONET+ Request Signer by Wulkanowy",
   "main": "plugin.js",
   "insomnia": {
@@ -26,6 +26,6 @@
   "homepage": "https://github.com/wulkanowy/uonet-request-signer/tree/master/insomnia-plugin#readme",
   "license": "MIT",
   "dependencies": {
-    "@wulkanowy/uonet-request-signer": "^0.1.4"
+    "@wulkanowy/uonet-request-signer": "^0.2.0"
   }
 }
