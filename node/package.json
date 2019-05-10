@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/wulkanowy/uonet-request-signer/issues"
   },
-  "homepage": "https://github.com/wulkanowy/uonet-request-signer/tree/master/js#readme",
+  "homepage": "https://github.com/wulkanowy/uonet-request-signer/tree/master/node#readme",
   "dependencies": {
     "node-forge": "^0.8.2",
     "node-webcrypto-ossl": "^1.0.42",
