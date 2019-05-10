@@ -9,8 +9,8 @@ jobs:
         path: ~/signer
     - run: composer install
     - run: php ./php/tests/signer_test.php
-  js:
-    working_directory: ~/signer/js
+  node:
+    working_directory: ~/signer/node
     docker:
     - image: circleci/node:8
     steps:
@@ -43,6 +43,6 @@ workflows:
   test:
     jobs:
     - php
-    - js
+    - node
     - jvm
     - python
