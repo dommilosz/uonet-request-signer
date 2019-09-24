@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/wulkanowy/uonet-request-signer/tree/master/js#readme",
   "dependencies": {
-    "node-forge": "^0.8.2"
+    "node-forge": "^0.9.0"
   }
 }
