@@ -1,6 +1,6 @@
 {
   "name": "@wulkanowy/insomnia-plugin-uonet-request-signer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "UONET+ Request Signer by Wulkanowy",
   "main": "plugin.js",
   "insomnia": {
