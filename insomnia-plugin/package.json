@@ -26,6 +26,6 @@
   "homepage": "https://github.com/wulkanowy/uonet-request-signer/tree/master/insomnia-plugin#readme",
   "license": "MIT",
   "dependencies": {
-    "@wulkanowy/uonet-request-signer": "^0.2.0"
+    "@wulkanowy/uonet-request-signer": "^0.2.1"
   }
 }
