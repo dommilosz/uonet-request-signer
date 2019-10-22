@@ -8,7 +8,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import java.util.concurrent.TimeUnit
 
-
 class SignerActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +39,7 @@ class SignerActivity : Activity() {
         return String.format(
             "[%s] secs : [%s] microseconds",
             TimeUnit.MILLISECONDS.toSeconds(diff),
-            TimeUnit.MICROSECONDS.toMicros(diff)
+            TimeUnit.MILLISECONDS.toMicros(diff)
         )
     }
 }
