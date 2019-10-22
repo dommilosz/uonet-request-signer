@@ -1,18 +1,18 @@
 # Uonet+ request signer for android
 
-[![](https://jitpack.io/v/wulkanowy/uonet-request-signer.svg)](https://jitpack.io/#wulkanowy/uonet-request-signer)
+[![Bintray](https://img.shields.io/bintray/v/wulkanowy/wulkanowy/signer-android.svg?style=flat-square)](https://bintray.com/wulkanowy/wulkanowy/signer-android)
 
 ## Instalation
 
 ```grovy
 allprojects {
     repositories {
-        maven { url 'https://jitpack.io' }
+        maven { url "https://dl.bintray.com/wulkanowy/wulkanowy" }
     }
 }
 
 dependencies {
-    implementation 'com.github.wulkanowy:uonet-request-signer:android:master-SNAPSHOT'
+    implementation "io.github.wulkanowy:signer-android:0.1.0"
 }
 ```
 
