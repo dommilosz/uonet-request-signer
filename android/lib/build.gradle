@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.wulkanowy.uonet-request-signer'
+group 'com.github.wulkanowy'
 
 android {
     compileSdkVersion 29
