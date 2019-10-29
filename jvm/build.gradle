@@ -7,7 +7,7 @@ plugins {
 group 'io.github.wulkanowy'
 version '0.1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 1.6
 
 repositories {
     mavenCentral()
@@ -15,14 +15,15 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "commons-codec:commons-codec:1.13"
     testImplementation "junit:junit:4.12"
 }
 
 compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "1.6"
 }
 compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "1.6"
 }
 
 jacocoTestReport {
