@@ -12,7 +12,7 @@ allprojects {
 }
 
 dependencies {
-    implementation "io.github.wulkanowy:signer-android:0.1.0"
+    implementation "io.github.wulkanowy:signer-android:0.1.1"
 }
 ```
 
