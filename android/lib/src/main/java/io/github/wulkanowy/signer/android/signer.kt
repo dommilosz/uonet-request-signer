@@ -27,7 +27,7 @@ fun signContent(privateKey: String, content: String): String {
         initSign(key)
         update(content.toByteArray())
     }
-    return Base64.encodeToString(signature.sign(), Base64.DEFAULT)
+    return Base64.encodeToString(signature.sign(), Base64.NO_WRAP)
 }
 
 fun getPrivateKeyFromCert(password: String, certificate: String): String {
