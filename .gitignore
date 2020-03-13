@@ -63,3 +63,5 @@ typings/
 
 vendor
 package-lock.json
+*.iml
+android/lib/src/main/gen
