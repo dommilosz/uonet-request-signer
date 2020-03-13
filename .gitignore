@@ -62,3 +62,5 @@ typings/
 .idea/
 
 vendor
+*.iml
+android/lib/src/main/gen
