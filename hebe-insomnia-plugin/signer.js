@@ -8,10 +8,10 @@ function getDigest(body) {
     return hash.digest("base64");
 }
 
-function getSignature(values, pkey) {
+function getSignatureValue(values, pkey) {
     const sign = aCrypto.createSign('RSA-SHA256');
     sign.update(values);
-    return sign.sign(pkey, "base64");
+    return sign.sign("-----BEGIN PRIVATE KEY-----\n" + pkey + "\n-----END PRIVATE KEY-----", "base64");
 }
 
 function getCanonicalUrl(fullUrl) {
@@ -38,14 +38,12 @@ function getSignatureValues(fingerprint, pkey, body, fullUrl, timestamp) {
     const canonicalUrl = getCanonicalUrl(fullUrl);
     const digest = getDigest(body);
     const {headers, values} = getHeadersList(body, digest, canonicalUrl, timestamp);
-    const signature = getSignature(values, pkey);
+    const signatureValue = getSignatureValue(values, pkey);
 
     return {
-        "digest": digest,
-        "keyId": fingerprint,
-        "headers": headers,
-        "signature": signature,
-        "canonicalUrl": canonicalUrl
+        "digest": `SHA-256=${digest}`,
+        "canonicalUrl": canonicalUrl,
+        "signature": `keyId="${fingerprint}",headers="${headers}",algorithm="sha256withrsa",signature=Base64(SHA256withRSA(${signatureValue}))`
     };
 }
 
