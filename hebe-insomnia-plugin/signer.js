@@ -22,27 +22,16 @@ function getCanonicalUrl(fullUrl) {
 }
 
 function getHeadersList(body, digest, canonicalUrl, timestamp) {
-    const timestampStrHeader = new Date(timestamp + 1000).toUTCString();
-    let signData = [
+    const signData = [
         ['vCanonicalUrl', canonicalUrl],
         body == null ? null : ['Digest', digest],
-        ['vDate', timestampStrHeader]
-    ];
-    let headers = "";
-    let values = "";
-    let first = true;
-    for (let data in signData) {
-        data = signData[data];
-        if (data == null)
-            continue;
-        if (!first)
-            headers += " ";
-        first = false;
-        headers += data[0];
-        values += data[1];
-    }
+        ['vDate', new Date(timestamp + 1000).toUTCString()]
+    ].filter(item => !!item);
 
-    return {"headers": headers, "values": values};
+    return {
+        "headers": signData.map(item => item[0]).join(" "),
+        "values": signData.map(item => item[1]).join()
+    };
 }
 
 function getSignatureValues(fingerprint, pkey, body, fullUrl, timestamp) {

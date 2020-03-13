@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-hebe-request-signer",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "Dzienniczek+ 2020 (hebe) Request Signer by Oranż Metylowy",
   "main": "plugin.js",
   "insomnia": {
