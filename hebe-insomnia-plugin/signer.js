@@ -30,7 +30,7 @@ function getHeadersList(body, digest, canonicalUrl, timestamp) {
 
     return {
         "headers": signData.map(item => item[0]).join(" "),
-        "values": signData.map(item => item[1]).join()
+        "values": signData.map(item => item[1]).join("")
     };
 }
 
