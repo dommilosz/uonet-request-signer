@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/wulkanowy/uonet-request-signer/tree/master/node#readme",
   "dependencies": {
-    "node-forge": "^0.9.0",
-    "node-webcrypto-ossl": "^1.0.48",
-    "@wulkanowy/uonet-request-signer": "^0.2.0"
+    "@wulkanowy/uonet-request-signer": "^0.2.1",
+    "node-forge": "^0.9.1",
+    "node-webcrypto-ossl": "^1.0.48"
   },
   "devDependencies": {
-    "mocha": "^6.2.0"
+    "mocha": "^6.2.2"
   }
 }
