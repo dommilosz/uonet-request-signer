@@ -1,0 +1,31 @@
+{
+  "name": "insomnia-plugin-hebe-request-signer",
+  "version": "0.1.0",
+  "description": "Dzienniczek+ 2020 (hebe) Request Signer by Oranż Metylowy",
+  "main": "plugin.js",
+  "insomnia": {
+    "name": "hebe-request-signer",
+    "description": "Dzienniczek+ 2020 (hebe) Request Signer by Oranż Metylowy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wulkanowy/uonet-request-signer.git"
+  },
+  "keywords": [
+    "uonet",
+    "wulkanowy",
+    "insomnia-plugin",
+    "hebe",
+    "dzienniczek",
+    "vulcan"
+  ],
+  "author": "Kuba Szczodrzyński <kuba@szczodrzynski.pl>",
+  "bugs": {
+    "url": "https://github.com/wulkanowy/uonet-request-signer/issues"
+  },
+  "homepage": "https://github.com/wulkanowy/uonet-request-signer/tree/master/insomnia-plugin#readme",
+  "license": "MIT",
+  "dependencies": {
+    "uuid": "^3.3.3"
+  }
+}
