@@ -1,5 +1,5 @@
 const uuid = require('uuid/v4');
-const {getSignatureValues} = require("./signer");
+const {getSignatureValues} = require("@wulkanowy/uonet-request-signer-node-hebe");
 
 function getOrThrow(context, name) {
     let header = context.request.getHeader(name);
@@ -8,6 +8,26 @@ function getOrThrow(context, name) {
     }
     return header;
 }
+
+function getWrappedBody(method, body, fingerprint, firebaseToken, timestamp) {
+    if (method !== 'POST') {
+        if (method !== 'GET') throw 'Incorrect request method (GET or POST).';
+        else return null;
+    }
+
+    return JSON.stringify({
+        AppName: 'DzienniczekPlus 2.0',
+        AppVersion: '1.0',
+        CertificateId: fingerprint,
+        Envelope: JSON.parse(body),
+        FirebaseToken: firebaseToken,
+        API: 1,
+        RequestId: uuid(),
+        Timestamp: timestamp,
+        TimestampFormatted: new Date(timestamp + 3600 * 1000 + 1000).toUTCString()
+    });
+}
+
 
 module.exports.requestHooks = [
     async (context) => {
@@ -46,22 +66,3 @@ module.exports.requestHooks = [
         context.request.removeHeader('FirebaseToken');
     }
 ];
-
-function getWrappedBody(method, body, fingerprint, firebaseToken, timestamp) {
-    if (method !== 'POST') {
-        if (method !== 'GET') throw 'Incorrect request method (GET or POST).';
-        else return null;
-    }
-
-    return JSON.stringify({
-        AppName: 'DzienniczekPlus 2.0',
-        AppVersion: '1.0',
-        CertificateId: fingerprint,
-        Envelope: JSON.parse(body),
-        FirebaseToken: firebaseToken,
-        API: 1,
-        RequestId: uuid(),
-        Timestamp: timestamp,
-        TimestampFormatted: new Date(timestamp + 3600 * 1000 + 1000).toUTCString()
-    });
-}
