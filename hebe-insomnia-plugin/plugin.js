@@ -28,10 +28,18 @@ function getWrappedBody(method, body, fingerprint, firebaseToken, timestamp) {
     });
 }
 
-
 module.exports.requestHooks = [
     async (context) => {
-        if (!context.request.hasHeader('PrivateKey')) return;
+        const headers = context.request.getEnvironmentVariable('headers');
+        if (headers !== undefined) {
+            for (const header in headers) {
+                if (headers.hasOwnProperty(header)) {
+                    context.request.setHeader(header, headers[header]);
+                }
+            }
+        }
+
+        if (!context.request.hasHeader('privatekey')) return;
 
         const pkey = getOrThrow(context, "PrivateKey");
         const fingerprint = getOrThrow(context, "Fingerprint");
