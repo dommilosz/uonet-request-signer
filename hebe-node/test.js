@@ -10,20 +10,20 @@ const body = "{}";
 describe("Invalid inputs", () => {
     it("invalid url", () => {
         expect(() => {
-            getSignatureValues(fingerprint, privateKey, body, "")
+            getSignatureValues(fingerprint, privateKey, body, "", +new Date())
         }).to.throw("The URL does not seem correct (does not match `(api/mobile/.+)` regex)");
     });
 });
 
 describe("Check result", () => {
     it("values should match", () => {
-        const {digest, canonicalUrl, signature} = getSignatureValues(fingerprint, privateKey, body, fullUrl, new Date(2020, 3, 14, 3, 14, 15).toUTCString());
+        const {digest, canonicalUrl, signature} = getSignatureValues(fingerprint, privateKey, body, fullUrl, +new Date(Date.UTC(2020, 3, 14, 4, 14, 15)));
 
         assert.equal(digest, "SHA-256=RBNvo1WzZ4oRRq0W9+hknpT7T8If536DEMBg9hyq/4o=");
         assert.equal(canonicalUrl, "api%2fmobile%2fregister%2fhebe");
         assert.equal(signature, "keyId=\"7EBA57E1DDBA1C249D097A9FF1C9CCDD45351A6A\"," +
             "headers=\"vCanonicalUrl Digest vDate\"," +
             "algorithm=\"sha256withrsa\"," +
-            "signature=Base64(SHA256withRSA(f3cX3ysfnejIPbZbdYoKio97xGTt5iGijcCw/XaQ3dq2u4R+YH/uodvD/v6t5BrSYS1YWfsbY09sq38BHL9ehOYJlbk8pP/TD6ay1GWxPNb6Q5sQ+laITXkSIXs52OlPcG+WYh9cpt+VodHTJljC8FfqUUd+coJOb4cPjTB7Df2GaInSHnNO+GssmbEJ5Dd+gVFMK1ukHJjpnalNzPDzunrEfGvmnr9ixjDC8QFvRDGXwXqrmrv/Tbi7F0YLS0e8KkZb1Vt4FISODreWXWyPR5EtXcHhG4fKYART3agixTjeEfYWjI8+qbESiSHlNojpq+VPo/rU4hBBGtj6LAesxA==))");
+            "signature=Base64(SHA256withRSA(mIVNkthTzTHmmXG1qxv1Jpt3uRlyhbj7VHysbCNpl0zXCCzuwTXsuCrfjexDDXsyJVo/LznQKOyvOaW4tEfrBobxtbtTnp7zYi54bdvAZa3pvM02yvkH4i/DvTLDKRO0R9UDZ1LraGrOTsIe3m3mQ21NOynVqCKadeqod8Y7l4YUlVYEmrtq/7xbCwr0qdne6G67eY4Amj6ffbG3TkVLpUrEETBnAC7oFjGYKhcRyvltAi+lcv6omANz1gwELf+Vmsa8NwFo/YGwY3R23z15athU/1iC1JcrECBLC8nRM1+KlvyIqx2HX6RG5R1cMOwBWVg6pRKUdrhxYbQ+VQ8Cag==))");
     });
 });
