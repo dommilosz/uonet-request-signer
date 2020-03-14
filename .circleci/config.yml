@@ -18,6 +18,15 @@ jobs:
         path: ~/signer
     - run: npm install
     - run: ./node_modules/.bin/mocha
+  node-hebe:
+    working_directory: ~/signer-hebe/hebe-node
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout:
+          path: ~/signer-hebe
+      - run: npm install
+      - run: ./node_modules/.bin/mocha
   jvm:
     working_directory: ~/signer/jvm
     docker:
