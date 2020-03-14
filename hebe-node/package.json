@@ -1,0 +1,29 @@
+{
+  "name": "@wulkanowy/uonet-request-signer-node-hebe",
+  "version": "0.1.0",
+  "description": "UONET+ (hebe) request signer for Node.js",
+  "main": "signer.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wulkanowy/uonet-request-signer.git"
+  },
+  "keywords": [
+    "uonet",
+    "hebe",
+    "wulkanowy",
+    "nodejs"
+  ],
+  "author": "Kuba Szczodrzyński <kuba@szczodrzynski.pl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wulkanowy/uonet-request-signer/issues"
+  },
+  "homepage": "https://github.com/wulkanowy/uonet-request-signer/tree/master/hebe-node#readme",
+  "devDependencies": {
+    "mocha": "^7.1.0",
+    "chai": "^4.2.0"
+  }
+}
