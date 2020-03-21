@@ -40,7 +40,7 @@ jobs:
   jvm-hebe:
     working_directory: ~/signer/hebe-jvm
     docker:
-      - image: circleci/openjdk:7
+      - image: circleci/openjdk:8
     steps:
       - checkout:
           path: ~/signer
