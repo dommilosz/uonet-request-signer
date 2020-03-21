@@ -1,2 +1,4 @@
+rootProject.name = 'uonet-request-signer'
+
 include 'hebe-jvm'
 include 'jvm'
