@@ -28,23 +28,23 @@ jobs:
       - run: npm install
       - run: ./node_modules/.bin/mocha
   jvm:
-    working_directory: ~/signer/jvm
+    working_directory: ~/signer
     docker:
     - image: circleci/openjdk:8
     steps:
     - checkout:
         path: ~/signer
-    - run: ./gradlew check jacocoTestReport
+    - run: ./gradlew :jvm:check jacocoTestReport
     - store_test_results:
         path: ./build/test-results
   jvm-hebe:
-    working_directory: ~/signer/hebe-jvm
+    working_directory: ~/signer
     docker:
       - image: circleci/openjdk:8
     steps:
       - checkout:
           path: ~/signer
-      - run: ./gradlew check jacocoTestReport
+      - run: ./gradlew :hebe-jvm:check jacocoTestReport
       - store_test_results:
           path: ./build/test-results
   python:
