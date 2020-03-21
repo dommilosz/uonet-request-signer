@@ -18,6 +18,7 @@
 | Implementation | Version |
 |---|---|
 | [Node.js](https://github.com/wulkanowy/uonet-request-signer/tree/master/hebe-node) | [![npm](https://img.shields.io/npm/v/@wulkanowy/uonet-request-signer-node-hebe.svg?style=flat-square)](https://www.npmjs.com/package/@wulkanowy/uonet-request-signer-node-hebe) |
+| [JVM](https://github.com/wulkanowy/uonet-request-signer/tree/master/hebe-jvm) | [![JitPack](https://img.shields.io/jitpack/v/wulkanowy/uonet-request-signer.svg?style=flat-square)](https://jitpack.io/#wulkanowy/uonet-request-signer) |
 
 
 ## Plugins

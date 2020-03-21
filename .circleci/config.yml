@@ -37,6 +37,16 @@ jobs:
     - run: ./gradlew check jacocoTestReport
     - store_test_results:
         path: ./build/test-results
+  jvm-hebe:
+    working_directory: ~/signer/hebe-jvm
+    docker:
+      - image: circleci/openjdk:7
+    steps:
+      - checkout:
+          path: ~/signer
+      - run: ./gradlew check jacocoTestReport
+      - store_test_results:
+          path: ./build/test-results
   python:
     working_directory: ~/signer/python
     docker:
@@ -55,4 +65,5 @@ workflows:
     - node
     - node-hebe
     - jvm
+    - jvm-hebe
     - python
