@@ -1,6 +1,6 @@
 {
   "name": "@wulkanowy/uonet-request-signer-node-hebe",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "UONET+ (hebe) request signer for Node.js",
   "main": "signer.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/wulkanowy/uonet-request-signer/tree/master/hebe-node#readme",
   "devDependencies": {
-    "mocha": "^7.1.0",
+    "mocha": "^7.1.1",
     "chai": "^4.2.0"
   }
 }
